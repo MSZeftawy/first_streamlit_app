@@ -37,7 +37,7 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header('Fruityvice Fruit Advice!')
 
 try:
-  fruit_choise = streamlit.text_input('What fruit would you like information about?','Kiwi')
+  fruit_choise = streamlit.text_input('What fruit would you like information about?')
   if not fruit_choise:
     streamlit.error("Please select a fruit to get information.")
   
@@ -50,7 +50,7 @@ try:
     
     # output json response as a table
     streamlit.dataframe(fruityvice_normalised)
-    streamlit.write('The user entered',fruit_choise)
+    #streamlit.write('The user entered',fruit_choise)
 
 
     # streamlit.text(fruityvice_response.json()) # to output data on display
